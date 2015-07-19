@@ -1,4 +1,4 @@
 function share() {
 	var message = document.forms["social"]["bericht"].value;
-	share(message, null, null, null);
+	window.plugins.socialsharing.share(message, null, null, null);
 }
