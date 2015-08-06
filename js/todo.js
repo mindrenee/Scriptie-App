@@ -1,6 +1,7 @@
 function createToDo() {
 	var todoDictionary = {};
-	var todo = document.forms["add"]["item"].value;
+	//var todo = document.forms["add"]["item"].value;
+    var todo = document.getElementById("item").value;
     
     if (todo == null || todo == "") {
         alert("To do cannot be empty");
@@ -8,7 +9,7 @@ function createToDo() {
     else {
         // append the new to-do with the table
         todoDictionary = { text : todo};
-        document.forms["add"]["item"].value = '';
+        document.getElementById("item").value = '';
         addTableRow(todoDictionary, false);
     }
 }
